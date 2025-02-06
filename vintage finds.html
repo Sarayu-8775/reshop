@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Finds</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        
+        :root {
+            --background-color: beige;
+            --text-color: #333333;
+            --header-color: #2C3E50;
+            --form-bg-color: #FFFFFF;
+            --button-bg-color: #5A6D8A;
+            --button-text-color: #FFFFFF;
+            --border-color: #DADADA;
+            --popup-bg-color: #EFEFEF;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: teal;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 3.5em;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 45%; /* Reduced the width of the image */
+            margin-right: 20px; /* Added space between image and form */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+        }
+
+
+        .form-container {
+            flex: 1;
+            max-width: 40%;
+            background-color: var(--form-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: var(--header-color);
+        }
+
+        .form-container input,
+        .form-container button {
+            width: 97%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-container button {
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+        }
+
+        .form-container button:disabled {
+            background-color: #BCC6D1;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Vintage Finds</div>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="vintage-items.jpg" alt="Vintage Items">
+        </div>
+        
+        <div class="form-container">
+            <h2>Sell Your Vintage Item</h2>
+            <form id="sellForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="number" id="year" placeholder="Year Bought" required>
+                
+                <label for="image">Image of Item</label>
+                <input type="file" id="image" accept="image/*" required>
+                
+                <label for="video">Video of Item</label>
+                <input type="file" id="video" accept="video/*">
+                
+                <input type="number" id="price" placeholder="Price" required>
+                <button type="button" id="submitBtn" disabled>Submit</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

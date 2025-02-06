@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Sports</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        
+        :root {
+            --background-color: beige;
+            --text-color: #333333;
+            --header-color: #2C3E50;
+            --form-bg-color: #FFFFFF;
+            --button-bg-color: #5A6D8A;
+            --button-text-color: #FFFFFF;
+            --border-color: #DADADA;
+            --popup-bg-color: #EFEFEF;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            background-image: url(https://images.everydayhealth.com/images/healthy-living/fitness/everything-you-need-know-about-fitness-1440x810.jpg); /* Replace with your image */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay to make the text readable */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 3.5em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .form-container {
+            flex: 1;
+            max-width: 500px; /* Increased width for a larger form box */
+            background-color: var(--form-bg-color);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Added a larger shadow for depth */
+            border: 1px solid var(--border-color);
+            margin: 20px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: var(--header-color);
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container button {
+            width: 100%;
+            margin-bottom: 20px; /* Increased spacing between fields */
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1.1em;
+        }
+
+        .form-container input[type="file"] {
+            width: 100%;
+            padding: 12px;
+        }
+
+        .form-container button {
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            font-size: 1.1em;
+            cursor: pointer;
+            border: none;
+            padding: 15px;
+        }
+
+        .form-container button:disabled {
+            background-color: #BCC6D1;
+            cursor: not-allowed;
+        }
+
+        /* Additional padding for content */
+        .content {
+            padding: 40px;
+            background-color: var(--background-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <div class="header">Fitness & Sports</div>
+    </div>
+    
+    <div class="content">
+        <div class="container">
+            <div class="form-container">
+                <h2>Sell Your Fitness Equipment</h2>
+                <form id="sellForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="text" id="productName" placeholder="Product Name" required>
+                    <input type="number" id="year" placeholder="Year Bought" required>
+                    
+                    <label for="image">Image of Item</label>
+                    <input type="file" id="image" accept="image/*" required>
+                    
+                    <label for="video">Video of Item</label>
+                    <input type="file" id="video" accept="video/*">
+                    
+                    <input type="number" id="price" placeholder="Price" required>
+                    <button type="button" id="submitBtn" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

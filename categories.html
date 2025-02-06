@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        body { 
+            background-color: beige;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            background-color: teal;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 3.8em;
+            color: #eef0f2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #444;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .categories > .category-card:nth-child(4),
+        .categories > .category-card:nth-child(5) {
+            justify-self: center;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-label {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--header-color);
+        }
+
+        form input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+
+        @media (max-width: 768px) {
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .categories > .category-card:nth-child(4),
+            .categories > .category-card:nth-child(5) {
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Resell & Save Nature</h1>
+    </div>
+    <p class="intro-text">
+        Give your pre-loved items a second chance! Resell your products, earn money, and contribute to a sustainable future.  Let's create a greener world together !!!!
+    </p>
+
+    <div class="categories">
+        <div class="category-card">
+            <a href="./vintage.html">
+            <img src="vintage-finds.jpg" alt="Vintage Finds">
+            <div class="category-label">Vintage Finds</div>
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="./Home Decor.html"></a>
+            <img src="home-decor.jpg" alt="Home Decor">
+            <div class="category-label">Home Decor</div></a>
+        </div>
+        <div class="category-card">
+            <a href="./Books.html">
+            <img src="books.jpg" alt="Books">
+            <div class="category-label">Books</div></a>
+        </div>
+        <div class="category-card">
+            <a href="./Accessories.html">
+            <img src="accessories.jpg" alt="Accessories">
+            <div class="category-label">Accessories</div></a>
+        </div>
+        <div class="category-card">
+            <a href="./clothes.html">
+            <img src="clothing.jpg" alt="Clothing">
+            <div class="category-label">Clothing</div></a>
+        </div>
+        <div class="category-card">
+            <a href="./sports n fitness.html">
+            <img src="sports-fitness.jpg" alt="Sports & Fitness">
+            <div class="category-label">Sports & Fitness</div></a>
+        </div>
+    </div>
+</body>
+</html>
